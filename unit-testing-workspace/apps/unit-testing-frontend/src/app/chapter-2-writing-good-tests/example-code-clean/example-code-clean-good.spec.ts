@@ -12,26 +12,28 @@ describe('isSpeciesDangerous', () => {
   });
 });
 
-describe('isParcOpen', () => {
-  /*** sollten wir diesen Code wirklich Testen? ***/
+describe('isParkOpen', () => {
+  /*** sollten wir diesen Code wirklich Testen?
+   * Regel 1: Teste keinen Code, den du nicht ändern kannst.
+   ***/
 });
 
 describe('evacuateVisitors', () => {
 
-  it('should return false if parc is open is true, whereabout of escaped species known is false and is dangerous is true', () => {
+  it('should return false if park is open is true, whereabout of escaped species known is false and is dangerous is true', () => {
     expect(evacuateVisitors(true, false, true)).toBeFalsy();
   });
 
 
-  it('should return false if parc is open is false, whereabout of escaped species known is true and is dangerous is true', () => {
+  it('should return false if park is open is false, whereabout of escaped species known is true and is dangerous is true', () => {
     expect(evacuateVisitors(false, true, true)).toBeFalsy();
   });
 
-  it('should return false if parc is open is true, whereabout of escaped species known is true and is dangerous is false', () => {
+  it('should return false if park is open is true, whereabout of escaped species known is true and is dangerous is false', () => {
     expect(evacuateVisitors(true, true, false)).toBeFalsy();
   });
 
-  it('should return true if parc is open is true, whereabout of escaped species known is true and is dangerous is true', () => {
+  it('should return true if park is open is true, whereabout of escaped species known is true and is dangerous is true', () => {
     expect(evacuateVisitors(true, true, true)).toBeTruthy();
   });
 });

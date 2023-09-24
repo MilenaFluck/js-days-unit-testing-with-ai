@@ -6,7 +6,7 @@ export function emergencyAction(species: Species, deaths: number, currentDateAnd
                                 openingToday: Date, closingToday: Date,
                                 whereaboutsOfEscapedSpeciesKnown: boolean): { evacuate: boolean , speciesEmergencyAction: SpeciesEmergencyAction} {
   let isDangerous;
-  const parcHasVisitors = isAfter(openingToday, currentDateAndTime) && isBefore(closingToday, currentDateAndTime);
+  const parkHasVisitors = isAfter(openingToday, currentDateAndTime) && isBefore(closingToday, currentDateAndTime);
 
   switch(species) {
       case Species.VELOCIRAPTOR:
@@ -29,13 +29,13 @@ export function emergencyAction(species: Species, deaths: number, currentDateAnd
     }
   } else {
     if (deaths > 0 && whereaboutsOfEscapedSpeciesKnown) {
-      if (parcHasVisitors) {
+      if (parkHasVisitors) {
         return { evacuate: true, speciesEmergencyAction: SpeciesEmergencyAction.SHOOT};
       } else {
         return { evacuate: false, speciesEmergencyAction: SpeciesEmergencyAction.SHOOT};
       }
     } else if (deaths == 0 && whereaboutsOfEscapedSpeciesKnown) {
-      if (parcHasVisitors) {
+      if (parkHasVisitors) {
         return { evacuate: true, speciesEmergencyAction: SpeciesEmergencyAction.STUN};
       } else {
         return { evacuate: false, speciesEmergencyAction: SpeciesEmergencyAction.STUN};

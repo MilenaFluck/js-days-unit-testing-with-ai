@@ -14,6 +14,7 @@ describe('isSpeciesDangerous', () => {
   });
 });
 
+/*** Regel 3: Halte es so einfach wie möglich ***/
 describe('evacuateVisitors', () => {
   it.each([
     [false, false, false, false],
@@ -24,8 +25,8 @@ describe('evacuateVisitors', () => {
     [true, false, true, false],
     [true, true, false, false],
     [true, true, true, true]
-  ])('when parc open is %s, whereabouts of species known is %s and species is dangerous is %s then evacuate visitors is %s', (parcIsOpen, whereaboutsOfEscapedSpeciesKnown, speciesIsDangerous, expected) => {
-    expect(evacuateVisitors(parcIsOpen, whereaboutsOfEscapedSpeciesKnown, speciesIsDangerous))
+  ])('when park open is %s, whereabouts of species known is %s and species is dangerous is %s then evacuate visitors is %s', (parkIsOpen, whereaboutsOfEscapedSpeciesKnown, speciesIsDangerous, expected) => {
+    expect(evacuateVisitors(parkIsOpen, whereaboutsOfEscapedSpeciesKnown, speciesIsDangerous))
       .toEqual(expected);
   });
 });

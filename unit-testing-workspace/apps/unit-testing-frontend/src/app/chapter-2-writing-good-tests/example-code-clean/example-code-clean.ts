@@ -7,12 +7,12 @@ export function isSpeciesDangerous(species: Species): boolean {
   return dangerousSpecies.includes(species);
 }
 
-export function isParcOpen(currentDateAndTime: Date, openingToday: Date, closingToday: Date): boolean {
+export function isParkOpen(currentDateAndTime: Date, openingToday: Date, closingToday: Date): boolean {
   return isAfter(openingToday, currentDateAndTime) && isBefore(closingToday, currentDateAndTime);
 }
 
-export function evacuateVisitors(parcIsOpen: boolean, whereaboutsOfEscapedSpeciesKnown: boolean, speciesIsDangerous: boolean): boolean {
-  return parcIsOpen && whereaboutsOfEscapedSpeciesKnown && speciesIsDangerous;
+export function evacuateVisitors(parkIsOpen: boolean, whereaboutsOfEscapedSpeciesKnown: boolean, speciesIsDangerous: boolean): boolean {
+  return parkIsOpen && whereaboutsOfEscapedSpeciesKnown && speciesIsDangerous;
 }
 
 export function determineSpeciesEmergencyProcedureNextStep(whereaboutsOfEscapedSpeciesKnown: boolean, deaths: number): SpeciesEmergencyAction {
