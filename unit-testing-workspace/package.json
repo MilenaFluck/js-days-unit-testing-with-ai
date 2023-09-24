@@ -2,7 +2,10 @@
   "name": "unit-testing",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "nx test unit-testing-frontend": "nx test unit-testing-frontend --coverage",
+    "nx test unit-testing-backend": "nx test unit-testing-backend --coverage"
+  },
   "private": true,
   "devDependencies": {
     "@angular-devkit/build-angular": "~16.2.0",
@@ -58,6 +61,7 @@
     "@nestjs/platform-express": "^10.0.2",
     "@ngneat/spectator": "^15.0.1",
     "axios": "^1.0.0",
+    "date-fns": "^2.30.0",
     "ng-mocks": "^14.11.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "~7.8.0",
