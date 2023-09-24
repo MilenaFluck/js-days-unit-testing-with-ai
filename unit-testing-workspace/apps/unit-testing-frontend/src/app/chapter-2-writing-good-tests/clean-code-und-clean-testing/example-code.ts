@@ -17,7 +17,7 @@ export enum SpeciesEmergencyProcedure {
 // Beispielcode dirty: Schwer zu testen
 export function emergencyAction(species: Species, deaths: number, time: number,
                                 openingTimes: { opens: number; closes: number },
-                                whereaboutsofEscapedSpeciesKnown: boolean): ({ evacuate: boolean } | SpeciesEmergencyProcedure)[] {
+                                whereaboutsOfEscapedSpeciesKnown: boolean): ({ evacuate: boolean } | SpeciesEmergencyProcedure)[] {
   let isDangerous;
   const zooHasVisitors = (time >= openingTimes.opens && time <= openingTimes.closes);
 
@@ -29,21 +29,21 @@ export function emergencyAction(species: Species, deaths: number, time: number,
   }
 
   if (!isDangerous) {
-    if (!whereaboutsofEscapedSpeciesKnown) {
+    if (!whereaboutsOfEscapedSpeciesKnown) {
       return [{ evacuate: false }, SpeciesEmergencyProcedure.SEARCH];
     } else {
       [{ evacuate: false }, SpeciesEmergencyProcedure.STUN];
     }
   } else {
-    if (deaths > 0 && whereaboutsofEscapedSpeciesKnown) {
+    if (deaths > 0 && whereaboutsOfEscapedSpeciesKnown) {
       if (zooHasVisitors) {
         return [{ evacuate: true }, SpeciesEmergencyProcedure.SHOOT];
       } else {
         return [{ evacuate: false }, SpeciesEmergencyProcedure.SHOOT];
       }
-    } else if (isDangerous && deaths == 0 && whereaboutsofEscapedSpeciesKnown) {
+    } else if (isDangerous && deaths == 0 && whereaboutsOfEscapedSpeciesKnown) {
       return [{ evacuate: true }, SpeciesEmergencyProcedure.STUN];
-    } else if (!whereaboutsofEscapedSpeciesKnown) {
+    } else if (!whereaboutsOfEscapedSpeciesKnown) {
       if (zooHasVisitors) {
         return [{ evacuate: false }, SpeciesEmergencyProcedure.SEARCH];
       } else {
@@ -71,12 +71,12 @@ export function peopleDied(deaths: number): boolean {
   return deaths > 0;
 }
 
-export function evacuateVisitors(zooIsOpen: boolean, whereaboutsofEscapedSpeciesKnown: boolean, speciesIsDangerous: boolean): boolean {
-    return zooIsOpen && whereaboutsofEscapedSpeciesKnown && speciesIsDangerous;
+export function evacuateVisitors(zooIsOpen: boolean, whereaboutsOfEscapedSpeciesKnown: boolean, speciesIsDangerous: boolean): boolean {
+    return zooIsOpen && whereaboutsOfEscapedSpeciesKnown && speciesIsDangerous;
 }
 
-export function determineSpeciesEmergencyProcedureNextStep(whereaboutsofEscapedSpeciesKnown: boolean, peopleDied: boolean): SpeciesEmergencyProcedure {
-  if (!whereaboutsofEscapedSpeciesKnown) {
+export function determineSpeciesEmergencyProcedureNextStep(whereaboutsOfEscapedSpeciesKnown: boolean, peopleDied: boolean): SpeciesEmergencyProcedure {
+  if (!whereaboutsOfEscapedSpeciesKnown) {
     return SpeciesEmergencyProcedure.SEARCH;
   }
   return peopleDied ? SpeciesEmergencyProcedure.SHOOT : SpeciesEmergencyProcedure.STUN;
