@@ -41,7 +41,7 @@ export function emergencyAction(species: Species, deaths: number, time: number,
       } else {
         return [{ evacuate: false }, SpeciesEmergencyProcedure.SHOOT];
       }
-    } else if ((isDangerous || !isDangerous) && deaths == 0 && whereaboutsofEscapedSpeciesKnown) {
+    } else if (isDangerous && deaths == 0 && whereaboutsofEscapedSpeciesKnown) {
       return [{ evacuate: true }, SpeciesEmergencyProcedure.STUN];
     } else if (!whereaboutsofEscapedSpeciesKnown) {
       if (zooHasVisitors) {
