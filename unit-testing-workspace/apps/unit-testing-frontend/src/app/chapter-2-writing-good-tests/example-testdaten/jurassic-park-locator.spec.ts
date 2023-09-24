@@ -1,12 +1,13 @@
 import { findAllParksInTheCountry, germany } from './jurassic-park-locator';
 import { ParkTestdaten } from './model/park.testdaten';
+import { Park } from './model/park.model';
 
 describe('findAllParksInTheCountry', () => {
 
   /*** Option 1: Stelle Testdaten selbst zusammen ***/
   it('should return all parks located in Germany I', () => {
 
-    const allParks = [
+    const allParks: Park[] = [
       {
         id: '1',
         name: '',
