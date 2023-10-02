@@ -4,6 +4,8 @@ import writeDinosaurData from './write-dinosaur-data';
 import { promises as fs } from 'fs';
 
 /*** Lösung Schritt 1: Wir ersetzen das Modul durch einen leeren Mock. ***/
+// /*** Später für globales Mocking ***/
+// jest.mock('fs');
 jest.mock('fs', () => {
   return {
     promises: {
