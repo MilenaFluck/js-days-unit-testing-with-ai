@@ -20,15 +20,6 @@ describe('isParkOpen', () => {
 
 describe('evacuateVisitors', () => {
 
-  it('should return false if park is open is true, whereabout of escaped species known is false and is dangerous is true', () => {
-    expect(evacuateVisitors(true, false, true)).toBeFalsy();
-  });
-
-
-  it('should return false if park is open is false, whereabout of escaped species known is true and is dangerous is true', () => {
-    expect(evacuateVisitors(false, true, true)).toBeFalsy();
-  });
-
   it('should return false if park is open is true, whereabout of escaped species known is true and is dangerous is false', () => {
     expect(evacuateVisitors(true, true, false)).toBeFalsy();
   });

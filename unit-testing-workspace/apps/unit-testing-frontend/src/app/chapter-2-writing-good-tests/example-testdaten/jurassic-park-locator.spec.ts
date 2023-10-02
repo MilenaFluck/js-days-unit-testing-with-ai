@@ -58,7 +58,7 @@ describe('findAllParksInTheCountry', () => {
     expect(findAllParksInTheCountry(germany, parks)).toStrictEqual([parks[0], parks[1]]);
   });
 
-  /*** Option 2: Erzeuge Object mit Parametern ***/
+  /*** Option 4: Erzeuge Object mit Parametern ***/
   it('should return all parks located in Germany IV', () => {
     const parks = [
       ParkTestdaten.createTestdataWithParameters('1', germany),

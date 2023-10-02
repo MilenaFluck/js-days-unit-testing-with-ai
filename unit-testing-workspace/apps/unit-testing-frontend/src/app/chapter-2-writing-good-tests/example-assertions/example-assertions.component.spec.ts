@@ -23,7 +23,7 @@ describe('ExampleAssertionsComponent', () => {
 
 
   /*** Regel 4: Halte die Anzahl an Assertions gering. ***/
-  it('should not emit chosen park', () => {
+  it('should not emit chosen park Phantasialand', () => {
     spectator.component.choosePark = createEventEmitterMock();
     spectator.component.choose(park);
 
@@ -36,7 +36,7 @@ describe('ExampleAssertionsComponent', () => {
 
 
   /*** Regel 2: Teste immer nur eine Sache pro Tests.. ***/
-  it('should not emit chosen park if park exists', () => {
+  it('should emit chosen park if park exists', () => {
     spectator.component.choosePark = createEventEmitterMock();
 
     /*** Test 1 ***/
