@@ -1,19 +1,22 @@
 import { Species } from '../../chapter-3-writing-good-tests/model';
-import { Dino } from './dino';
-import { Food } from './food.enum';
+import { Dino } from '../dino-test-suites/dino';
+import { Food } from '../dino-test-suites/food.enum';
 
 describe("train", () => {
-  it("should train dino", () => {
-    const dino = new Dino();
+  let dino: Dino;
+
+  beforeEach(() => {
+    dino = new Dino();
     dino.age = 12;
+  })
+
+  it("should train dino", () => {
     dino.species = Species.STEGOSAURUS;
     dino.train();
     expect(dino.trained).toBeTruthy();
   })
 
   it("should not train dino which is not trainable", () => {
-    const dino = new Dino();
-    dino.age = 12;
     dino.species = Species.VELOCIRAPTOR;
     dino.train();
     expect(dino.trained).toBeFalsy();

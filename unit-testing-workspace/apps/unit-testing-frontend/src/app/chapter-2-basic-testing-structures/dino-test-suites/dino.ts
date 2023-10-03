@@ -3,15 +3,13 @@ import { isVegetarian } from '../triple-a-basics/triple-a-basics';
 import { Food } from './food.enum';
 
 export class Dino {
-  name: string;
+  name: string = '';
   // age in months
-  age: number;
-  species: Species
+  age: number = 0;
+  species: Species = Species.UNKNOWN;
+  trained: boolean = false;
 
-  constructor(name: string, age: number, species: Species) {
-    this.name = name;
-    this.age = age;
-    this.species = species;
+  constructor() {
   }
 
   getFood(): Food {
@@ -21,15 +19,20 @@ export class Dino {
     return this.isVegetarien() ? Food.GRASS : Food.MEAT;
   }
 
-  isTrainable(): boolean {
-    if (this.isVegetarien() && this.age < 36) {
-        return true;
-    }
-    return !this.isVegetarien() && this.age < 12;
-  }
-
   isVegetarien(): boolean {
     return isVegetarian(this.species);
   }
 
+  isTrainable(): boolean {
+    if (this.isVegetarien() && this.age < 36) {
+      return true;
+    }
+    return !this.isVegetarien() && this.age < 12;
+  }
+
+  train(): void {
+    if (this.isTrainable()) {
+      this.trained = true;
+    }
+  }
 }
