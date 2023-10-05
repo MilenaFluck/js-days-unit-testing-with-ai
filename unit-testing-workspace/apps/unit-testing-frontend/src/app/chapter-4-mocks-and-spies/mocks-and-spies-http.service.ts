@@ -10,8 +10,7 @@ export class MocksAndSpiesHttpService {
 
   private readonly baseUrl = `${environment.baseUrl}/parks`;
 
-  constructor(private httpClient: HttpClient) {
-  }
+  constructor(private httpClient: HttpClient) {}
 
   public get(): Observable<string[]> {
     return this.httpClient.get<string[]>(`${this.baseUrl}`);
