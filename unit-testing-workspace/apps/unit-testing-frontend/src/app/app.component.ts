@@ -3,8 +3,11 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'unit-testing-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'unit-testing-frontend';
+  public links = [
+    {name: 'Dashboard', href: '/', icon: 'dashboard'},
+    {name: 'Dinosaurier', href: '/dino', icon: 'pets'}
+  ];
 }

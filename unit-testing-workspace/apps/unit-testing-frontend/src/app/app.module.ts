@@ -1,19 +1,42 @@
 import { NgModule } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app.routing-module';
 import { MocksAndSpiesComponent } from './chapter-4-mocks-and-spies/mocks-and-spies.components';
 import {
   ExampleAssertionsComponent
-} from './chapter-2-writing-good-tests/example-assertions/example-assertions.component';
+} from './chapter-3-writing-good-tests/example-assertions/example-assertions.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { DinosaurListComponent } from './dashboard/dinosaur-list/dinosaur-list.component';
+import { KpiCardComponent } from './dashboard/kpi-card/kpi-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DashboardComponent,
+    KpiCardComponent,
+    DinosaurListComponent,
     MocksAndSpiesComponent,
     ExampleAssertionsComponent
   ],
-  imports: [BrowserModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    MatListModule,
+    MatCardModule,
+    MatGridListModule,
+    MatIconModule,
+    MatTableModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

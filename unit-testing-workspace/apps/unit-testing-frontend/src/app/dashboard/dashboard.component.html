@@ -1,0 +1,13 @@
+<div class="grid-container">
+  <div class="kpi-wrap">
+    <mat-grid-list [cols]="3" rowHeight="160px">
+      <mat-grid-tile *ngFor="let card of KPICards">
+        <app-kpi-card class="kpi-card"
+                      [title]="card.title"
+                      [value]="card.value"
+                      [difference]="card.difference"
+        ></app-kpi-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+</div>
