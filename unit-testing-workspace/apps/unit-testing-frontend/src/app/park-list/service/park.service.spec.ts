@@ -1,12 +1,14 @@
+/** Beispiel Unterschied der Matcher toBe, toEqual und toStrictEqual **/
 import { Species } from '../../chapter-3-writing-good-tests/model';
-import { Park } from './park-matcher';
+import { ParkService } from './park.service';
 
 it("should return species", () => {
   // Arrange
   const species = new Set<Species>([Species.VELOCIRAPTOR, Species.STEGOSAURUS]);
-  const park = new Park(species);
+  const parkService = new ParkService();
+  parkService.setSpecies(species);
   // Act
-  const result = park.getSpecies();
+  const result = parkService.getSpecies();
   // Assert
   expect(result.size).toBe(2);
   // expect(result).toBe(species);

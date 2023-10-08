@@ -1,6 +1,7 @@
 import { Species } from '../../chapter-3-writing-good-tests/model';
-import { isVegetarian } from '../triple-a-basics/triple-a-basics';
+import { DinoUtil } from './dino.util';
 import { Food } from './food.enum';
+import isHerbivore = DinoUtil.isHerbivore;
 
 export class Dino {
   name: string = '';
@@ -9,25 +10,18 @@ export class Dino {
   species: Species = Species.UNKNOWN;
   trained: boolean = false;
 
-  constructor() {
-  }
-
   getFood(): Food {
     if (this.age < 6) {
       return Food.MILK;
     }
-    return this.isVegetarien() ? Food.GRASS : Food.MEAT;
-  }
-
-  isVegetarien(): boolean {
-    return isVegetarian(this.species);
+    return isHerbivore(this.species) ? Food.GRASS : Food.MEAT;
   }
 
   isTrainable(): boolean {
-    if (this.isVegetarien() && this.age < 36) {
+    if (isHerbivore(this.species) && this.age < 36) {
       return true;
     }
-    return !this.isVegetarien() && this.age < 12;
+    return !isHerbivore(this.species) && this.age < 12;
   }
 
   train(): void {

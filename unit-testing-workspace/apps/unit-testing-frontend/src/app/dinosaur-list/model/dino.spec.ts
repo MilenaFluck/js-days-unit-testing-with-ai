@@ -1,22 +1,20 @@
+/** Test Suites Beispiel **/
 import { Species } from '../../chapter-3-writing-good-tests/model';
-import { Dino } from '../dino-test-suites/dino';
-import { Food } from '../dino-test-suites/food.enum';
+import { Dino } from './dino';
+import { Food } from './food.enum';
 
 describe("train", () => {
-  let dino: Dino;
-
-  beforeEach(() => {
-    dino = new Dino();
-    dino.age = 12;
-  })
-
   it("should train dino", () => {
+    const dino = new Dino();
+    dino.age = 12;
     dino.species = Species.STEGOSAURUS;
     dino.train();
     expect(dino.trained).toBeTruthy();
   })
 
   it("should not train dino which is not trainable", () => {
+    const dino = new Dino();
+    dino.age = 12;
     dino.species = Species.VELOCIRAPTOR;
     dino.train();
     expect(dino.trained).toBeFalsy();
@@ -40,7 +38,7 @@ describe("getFood", () => {
     expect(result).toBe(Food.MEAT);
   })
 
-  it("should return meat for plant eaters", () => {
+  it("should return grass for herbivore", () => {
     const dino = new Dino();
     dino.age = 12;
     dino.species = Species.STEGOSAURUS;
@@ -50,7 +48,7 @@ describe("getFood", () => {
 })
 
 describe("isTrainable", () => {
-  it("should return true for plant eater younger than 36 months", () => {
+  it("should return true for herbivore younger than 36 months", () => {
     const dino = new Dino();
     dino.age = 35;
     dino.species = Species.STEGOSAURUS;
@@ -66,7 +64,7 @@ describe("isTrainable", () => {
     expect(result).toBeTruthy();
   })
 
-  it("should return false for plant eater older than 36 months", () => {
+  it("should return false for herbivore older than 36 months", () => {
     const dino = new Dino();
     dino.age = 36;
     dino.species = Species.STEGOSAURUS;
@@ -83,20 +81,24 @@ describe("isTrainable", () => {
   })
 })
 
-describe("isVegetarian", () => {
-  it("should return true for plant eater", () => {
-    const dino = new Dino();
-    dino.age = 12;
-    dino.species = Species.STEGOSAURUS;
-    const result = dino.isVegetarien();
-    expect(result).toBeTruthy();
-  })
-
-  it("should return false for carnivore", () => {
-    const dino = new Dino();
-    dino.age = 12;
-    dino.species = Species.VELOCIRAPTOR;
-    const result = dino.isVegetarien();
-    expect(result).toBeFalsy();
-  })
-})
+/** Hooks Beispiel **/
+// describe("train", () => {
+//   let dino: DinoUtil;
+//
+//   beforeEach(() => {
+//     dino = new Dino;
+//     dino.age = 12;
+//   })
+//
+//   it("should train dino", () => {
+//     dino.species = Species.STEGOSAURUS;
+//     dino.train();
+//     expect(dino.trained).toBeTruthy();
+//   })
+//
+//   it("should not train dino which is not trainable", () => {
+//     dino.species = Species.VELOCIRAPTOR;
+//     dino.train();
+//     expect(dino.trained).toBeFalsy();
+//   })
+// })

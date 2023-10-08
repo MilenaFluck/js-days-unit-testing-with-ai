@@ -13,8 +13,9 @@ import {
   ExampleAssertionsComponent
 } from './chapter-3-writing-good-tests/example-assertions/example-assertions.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { DinosaurListComponent } from './dashboard/dinosaur-list/dinosaur-list.component';
+import { DinosaurListComponent } from './dinosaur-list/dinosaur-list.component';
 import { KpiCardComponent } from './dashboard/kpi-card/kpi-card.component';
+import { ParkListComponent } from './park-list/park-list.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { KpiCardComponent } from './dashboard/kpi-card/kpi-card.component';
     DashboardComponent,
     KpiCardComponent,
     DinosaurListComponent,
+    ParkListComponent,
     MocksAndSpiesComponent,
     ExampleAssertionsComponent
   ],

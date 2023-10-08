@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   public links = [
     {name: 'Dashboard', href: '/', icon: 'dashboard'},
-    {name: 'Dinosaurier', href: '/dino', icon: 'pets'}
+    {name: 'Dinosaurier', href: '/dino', icon: 'pets'},
+    {name: 'Parks', href: '/parks', icon: 'map'}
   ];
 }
