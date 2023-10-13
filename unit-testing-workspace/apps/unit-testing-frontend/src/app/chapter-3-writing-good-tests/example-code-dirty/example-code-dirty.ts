@@ -4,7 +4,7 @@ import { isBefore, isAfter } from 'date-fns';
 /*** Beispielcode dirty: Schwer zu testen ***/
 export function emergencyAction(species: Species, deaths: number, currentDateAndTime: Date,
                                 openingToday: Date, closingToday: Date,
-                                whereaboutsOfEscapedSpeciesKnown: boolean): { evacuate: boolean , speciesEmergencyAction: SpeciesEmergencyAction} {
+                                whereaboutsOfEscapedSpeciesKnown: boolean): { evacuate: boolean, speciesEmergencyAction: SpeciesEmergencyAction } {
   let isDangerous;
   const parkHasVisitors = isAfter(openingToday, currentDateAndTime) && isBefore(closingToday, currentDateAndTime);
 
@@ -46,3 +46,5 @@ export function emergencyAction(species: Species, deaths: number, currentDateAnd
   }
 
 }
+
+/*** lines of code: 40 ***/

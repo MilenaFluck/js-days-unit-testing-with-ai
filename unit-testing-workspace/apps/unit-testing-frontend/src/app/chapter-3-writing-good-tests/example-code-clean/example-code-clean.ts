@@ -21,3 +21,5 @@ export function determineSpeciesEmergencyProcedureNextStep(whereaboutsOfEscapedS
   }
   return deaths > 0 ? SpeciesEmergencyAction.SHOOT : SpeciesEmergencyAction.STUN;
 }
+
+/*** lines of code: 16 ***/
