@@ -1,6 +1,6 @@
 @import "apps/unit-testing-frontend/src/assets/colors";
 
-mat-card {
+.table-card {
   background-color: #ffffff;
   margin-left: 24px;
 }
@@ -35,3 +35,15 @@ table {
   text-align: center;
 
 }
+
+.outburst-card {
+  margin-left: 8px;
+
+  button {
+    background-color: map-get($app-primary-palette, 800);
+    color: #ffffff;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+}
+

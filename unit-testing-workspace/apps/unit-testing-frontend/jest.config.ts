@@ -2,6 +2,7 @@
 export default {
   displayName: 'unit-testing-frontend',
   preset: '../../jest.preset.js',
+  testEnvironment: 'jsdom',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   coverageDirectory: '../../coverage/apps/unit-testing-frontend',
   transform: {

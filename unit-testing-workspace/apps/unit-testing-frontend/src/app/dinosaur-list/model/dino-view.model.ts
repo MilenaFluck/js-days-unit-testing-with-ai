@@ -1,7 +1,7 @@
 import { Species } from '../../chapter-3-writing-good-tests/model';
 
 export interface Dino {
-  position: number;
+  id: number;
   name: string;
   // age in months
   age: number;
