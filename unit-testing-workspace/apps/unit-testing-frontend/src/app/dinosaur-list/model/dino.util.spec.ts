@@ -1,6 +1,6 @@
 /** AAA Beispiel **/
 import { Species } from '../../chapter-3-writing-good-tests/model';
-import { DinoUtil } from './dino-view.util';
+import { DinoUtil } from './dino.util';
 import isHerbivore = DinoUtil.isHerbivore;
 
 it("should return true if species is a herbivore", () => {

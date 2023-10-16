@@ -83,7 +83,7 @@ describe("isTrainable", () => {
 
 /** Hooks Beispiel **/
 // describe("train", () => {
-//   let dino: DinoUtil;
+//   let dino: Dino;
 //
 //   beforeEach(() => {
 //     dino = new Dino;

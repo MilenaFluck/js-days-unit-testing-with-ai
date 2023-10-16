@@ -11,7 +11,7 @@ it("should return species", () => {
   const result = parkService.getSpecies();
   // Assert
   expect(result.size).toBe(2);
-  // expect(result).toBe(species);
+  // expect(result).toBe(species); // fails, da es unterschiedliche Referenzen sind
   expect(result).toEqual(species);
 })
 
