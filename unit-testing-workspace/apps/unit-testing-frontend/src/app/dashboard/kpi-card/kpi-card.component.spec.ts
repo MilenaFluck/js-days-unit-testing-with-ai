@@ -1,3 +1,4 @@
+import { MatCardModule } from '@angular/material/card';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { KpiCardComponent } from './kpi-card.component';
 
@@ -5,7 +6,8 @@ describe('KpiCardComponent', () => {
   let kpiCardComponent: Spectator<KpiCardComponent>;
 
   const createComponent = createComponentFactory({
-    component: KpiCardComponent
+    component: KpiCardComponent,
+    imports: [MatCardModule]
   });
 
   beforeEach(() => {

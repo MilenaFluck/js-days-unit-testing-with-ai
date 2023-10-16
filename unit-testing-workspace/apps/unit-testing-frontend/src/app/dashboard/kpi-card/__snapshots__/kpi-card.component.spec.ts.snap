@@ -5,21 +5,27 @@ exports[`KpiCardComponent should render kpi card with difference 1`] = `
   id="root1"
 >
   <mat-card
-    class="dashboard-card"
+    class="mat-mdc-card mdc-card dashboard-card"
   >
     <mat-card-header
-      class="dashboard-card__header"
+      class="mat-mdc-card-header dashboard-card__header"
     >
-      <mat-card-title>
-        <h3
-          class="kpi-title"
+      <div
+        class="mat-mdc-card-header-text"
+      >
+        <mat-card-title
+          class="mat-mdc-card-title"
         >
-          BESUCHER
-        </h3>
-      </mat-card-title>
+          <h3
+            class="kpi-title"
+          >
+            BESUCHER
+          </h3>
+        </mat-card-title>
+      </div>
     </mat-card-header>
     <mat-card-content
-      class="dashboard-card-content kpi-result"
+      class="mat-mdc-card-content dashboard-card-content kpi-result"
     >
       <span>
         10000000
@@ -38,21 +44,27 @@ exports[`KpiCardComponent should render kpi card without difference 1`] = `
   id="root0"
 >
   <mat-card
-    class="dashboard-card"
+    class="mat-mdc-card mdc-card dashboard-card"
   >
     <mat-card-header
-      class="dashboard-card__header"
+      class="mat-mdc-card-header dashboard-card__header"
     >
-      <mat-card-title>
-        <h3
-          class="kpi-title"
+      <div
+        class="mat-mdc-card-header-text"
+      >
+        <mat-card-title
+          class="mat-mdc-card-title"
         >
-          BESUCHER
-        </h3>
-      </mat-card-title>
+          <h3
+            class="kpi-title"
+          >
+            BESUCHER
+          </h3>
+        </mat-card-title>
+      </div>
     </mat-card-header>
     <mat-card-content
-      class="dashboard-card-content kpi-result"
+      class="mat-mdc-card-content dashboard-card-content kpi-result"
     >
       <span>
         10000000

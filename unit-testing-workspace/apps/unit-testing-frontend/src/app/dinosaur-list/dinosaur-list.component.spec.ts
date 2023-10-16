@@ -1,4 +1,7 @@
 /** Beispiele Asynchrones Testen **/
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTableModule } from '@angular/material/table';
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { Species } from '../chapter-3-writing-good-tests/model';
 import { DinosaurListComponent } from './dinosaur-list.component';
@@ -11,7 +14,8 @@ describe('DinosaurListComponent', () => {
 
   const createComponent = createComponentFactory({
     component: DinosaurListComponent,
-    mocks: [DinoHttpService]
+    mocks: [DinoHttpService],
+    imports: [MatCardModule, MatTableModule, MatIconModule]
   });
 
   beforeEach(() => {
