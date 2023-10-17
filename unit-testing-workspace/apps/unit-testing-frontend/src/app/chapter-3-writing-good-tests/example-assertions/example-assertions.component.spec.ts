@@ -20,6 +20,19 @@ describe('ExampleAssertionsComponent', () => {
     spectator.detectChanges();
   });
 
+  /*** Regel 3: Teste immer nur eine Sache pro Tests.. ***/
+  it('should emit chosen park if park exists', () => {
+    spectator.component.choosePark = createEventEmitterMock();
+
+    /*** Test 1 ***/
+    spectator.component.choose(undefined);
+    expect(spectator.component.choosePark.emit).not.toHaveBeenCalled();
+
+    /*** Test 2 ***/
+    spectator.component.choose('Jurassic Park');
+    expect(spectator.component.choosePark.emit).nthCalledWith(1, 'Jurassic Park');
+  });
+
 
   /*** Regel 4: Halte die Anzahl an Assertions gering. ***/
   it('should not emit chosen park Phantasialand', () => {
@@ -31,19 +44,5 @@ describe('ExampleAssertionsComponent', () => {
     expect(spectator.component.choosePark.emit).not.toHaveBeenCalledWith('Phantasialand');
     expect(spectator.component.choosePark.emit).toHaveBeenCalledTimes(1);
     expect(spectator.component.choosePark.emit).lastCalledWith('Jurassic Park');
-  });
-
-
-  /*** Regel 2: Teste immer nur eine Sache pro Tests.. ***/
-  it('should emit chosen park if park exists', () => {
-    spectator.component.choosePark = createEventEmitterMock();
-
-    /*** Test 1 ***/
-    spectator.component.choose(undefined);
-    expect(spectator.component.choosePark.emit).not.toHaveBeenCalled();
-
-    /*** Test 2 ***/
-    spectator.component.choose('Jurassic Park');
-    expect(spectator.component.choosePark.emit).nthCalledWith(1, 'Jurassic Park');
   });
 });
