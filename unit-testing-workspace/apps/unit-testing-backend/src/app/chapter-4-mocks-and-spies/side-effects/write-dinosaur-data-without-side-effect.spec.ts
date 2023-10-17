@@ -8,13 +8,13 @@ import { promises as fs } from 'fs';
 // jest.mock('fs');
 /*** Hier mocken wir ein ganzes Modul. Wir können auch nur Teile eines Moduls (Submodules) mocken und für jedes
  * Submodule einen individuellen Return-Value definieren. ***/
-jest.mock('fs', () => {
-  return {
-    promises: {
-      writeFile: jest.fn()
-    }
-  };
-});
+// jest.mock('fs', () => {
+//   return {
+//     promises: {
+//       writeFile: jest.fn()
+//     }
+//   };
+// });
 
 it('should execute writeDinosaurData method test 1', () => {
   const data = 'Brachiosaurus';
