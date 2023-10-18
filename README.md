@@ -2,6 +2,9 @@
 
 ## Dies ist ein Nx Workspace, in dem eine Nest.js Backend App und eine Angular Frontend App liegen. Beide sind für sich startbar.
 
+## Getting Started
+Dependencies installieren: 'npm install'
+
 ## Apps starten
 Starten der Backend-Anwendung mit 'nx serve unit-testing-backend' bzw. 'nx serve unit-testing-frontend'.
 
