@@ -18,7 +18,7 @@ it("should return species", () => {
 it("should match input", () => {
   const numbers = [1, 2];
 
-  // expect(numbers).toBe([2,4]);
+  // expect(numbers).toBe([1,2]);
   expect(numbers).toEqual([1, 2]);
   expect(numbers).toEqual([1, 2, undefined]);
   expect(numbers).toStrictEqual([1, 2]);
