@@ -12,12 +12,12 @@
     </ng-container>
 
     <ng-container matColumnDef="species">
-      <th mat-header-cell *matHeaderCellDef>Spezies</th>
+      <th mat-header-cell *matHeaderCellDef>Species</th>
       <td mat-cell *matCellDef="let element"> {{element.species}} </td>
     </ng-container>
 
     <ng-container matColumnDef="herbivore">
-      <th mat-header-cell *matHeaderCellDef>Pflanzen-/Fleischfresser</th>
+      <th mat-header-cell *matHeaderCellDef>Herbivore/carnivore</th>
       <td mat-cell *matCellDef="let element">
         <mat-icon *ngIf="isHerbivore(element)">local_florist</mat-icon>
         <mat-icon *ngIf="!isHerbivore(element)">fastfood</mat-icon>
@@ -25,12 +25,12 @@
     </ng-container>
 
     <ng-container matColumnDef="age">
-      <th mat-header-cell *matHeaderCellDef>Alter in Monaten</th>
+      <th mat-header-cell *matHeaderCellDef>Age in month</th>
       <td mat-cell *matCellDef="let element"> {{element.age}} </td>
     </ng-container>
 
     <ng-container matColumnDef="trained">
-      <th mat-header-cell *matHeaderCellDef>Trainingstatus</th>
+      <th mat-header-cell *matHeaderCellDef>Training status</th>
       <td mat-cell *matCellDef="let element">
         <mat-icon *ngIf="element.trained">check_circle</mat-icon>
         <mat-icon *ngIf="!element.trained">not_interested</mat-icon>

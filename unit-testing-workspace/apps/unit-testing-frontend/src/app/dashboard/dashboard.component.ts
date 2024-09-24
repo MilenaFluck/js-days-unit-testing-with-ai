@@ -9,32 +9,32 @@ export class DashboardComponent {
 
   public KPICards = [
     {
-      title: 'Besucher dieses Jahr',
-      difference: '10% mehr als 2022',
+      title: 'Visitors this year',
+      difference: '10% more than in 2022',
       value: 10230283,
     },
     {
-      title: 'Besucher heute',
-      difference: '3% weniger als gestern',
+      title: 'Visitors today',
+      difference: '3% less than yesterday',
       value: 22397,
     },
     {
-      title: 'Einnahmen heute (€)',
+      title: 'Revenue today (€)',
       difference: '-36.955',
       value: 1231835,
     },
     {
-      title: 'Anzahl Dinosaurier Spezies',
-      difference: '23 mehr als letztes Jahr',
+      title: 'Number of dinasaur species',
+      difference: '23 more than last year',
       value: 154,
     },
     {
-      title: 'Geöffnete Bereiche',
+      title: 'Open areas',
       difference: undefined,
       value: 17,
     },
     {
-      title: 'Gefährdete Bereiche',
+      title: 'Dangerous areas',
       difference: undefined,
       value: 0,
     }
