@@ -1,7 +1,7 @@
 import { Species, SpeciesEmergencyAction } from '../model';
 import { isBefore, isAfter } from 'date-fns';
 
-/*** Beispielcode dirty: Schwer zu testen ***/
+/*** Example code dirty: Hard to test ***/
 export function emergencyAction(species: Species, deaths: number, currentDateAndTime: Date,
                                 openingToday: Date, closingToday: Date,
                                 whereaboutsOfEscapedSpeciesKnown: boolean): { evacuate: boolean, speciesEmergencyAction: SpeciesEmergencyAction } {

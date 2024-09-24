@@ -20,7 +20,7 @@ describe('ExampleAssertionsComponent', () => {
     spectator.detectChanges();
   });
 
-  /*** Regel 3: Teste immer nur eine Sache pro Tests.. ***/
+  /*** Rule 1: Only test one thing per test... ***/
   it('should emit chosen park if park exists', () => {
     spectator.component.choosePark = createEventEmitterMock();
 
@@ -34,12 +34,12 @@ describe('ExampleAssertionsComponent', () => {
   });
 
 
-  /*** Regel 4: Halte die Anzahl an Assertions gering. ***/
+  /*** Rule 2: Keep the number of assertions low. ***/
   it('should not emit chosen park Phantasialand', () => {
     spectator.component.choosePark = createEventEmitterMock();
     spectator.component.choose('Jurassic Park');
 
-    /*** Welche Assertion würdest du wählen? ***/
+    /*** Which assertion would you chose? ***/
     expect(spectator.component.choosePark.emit).toHaveBeenCalled();
     expect(spectator.component.choosePark.emit).not.toHaveBeenCalledWith('Phantasialand');
     expect(spectator.component.choosePark.emit).toHaveBeenCalledTimes(1);

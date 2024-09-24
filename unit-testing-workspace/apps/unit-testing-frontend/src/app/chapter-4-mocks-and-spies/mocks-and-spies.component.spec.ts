@@ -19,11 +19,11 @@ describe('MocksAndSpiesComponent', () => {
   });
 
   afterEach(() => {
-    /*** hier können alle Mocks gecleared werden ***/
+    /*** here all mocks can be cleared ***/
     // jest.clearAllMocks();
   });
 
-  /*** Beispiel 1: Einfacher Spy ***/
+  /*** Example 1: Simply Spy ***/
   it('should emit on chose', () => {
     spyOn(spectator.component.choosePark, 'emit');
 
@@ -31,8 +31,8 @@ describe('MocksAndSpiesComponent', () => {
     expect(spectator.component.choosePark.emit).toHaveBeenCalled();
   });
 
-  /*** Beispiel 2: Service mocken und realistischen Return-Value liefern ***/
-  /*** Wir benötigen einen Return-Value um weitere Funktionalität zu testen! ***/
+  /*** Beispiel 2: Mock service and deliver realistic Return-Value ***/
+  /*** We need a Return-Value to test further functionality! ***/
   it('should return observable of parks', (done) => {
 
     /*** hier wird der Service gemockt ***/

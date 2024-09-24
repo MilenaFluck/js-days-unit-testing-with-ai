@@ -1,29 +1,29 @@
 import { foodChain, movieList } from './mock-basics-with-jest';
-/*** Einige interessante Beispiele ***/
+/*** Further examples ***/
 
-/*** Das .mock-Property ***/
+/*** The .mock-Property ***/
 let mockedFunction = jest.fn(x => x + ' eats ');
 
-/*** Das Property beinhaltet Informationen über die aufgerufene Funktion. ***/
-it('den mock genauer unter die Lupe geben', () => {
-  console.log('Das Ergebnis: ', foodChain(['T-Rex', 'Triceratops', 'Trees'], mockedFunction));
+/*** Das Property contains infos about the called function. ***/
+it('closer look at the mock property', () => {
+  console.log('The result: ', foodChain(['T-Rex', 'Triceratops', 'Trees'], mockedFunction));
 
   // Infos über die gemockte Funktion: chainUpMock
-  console.log('Das .mock-Property: ', mockedFunction.mock);
+  console.log('The .mock-Property: ', mockedFunction.mock);
 
   expect(mockedFunction.mock.calls).toHaveLength(3);
 });
 
 
-/*** Multiple Mock Implementierungen ***/
-it('verschiedene Implementationen einer Funktion ansehen', () => {
+/*** Multiple Mock Implementations ***/
+it('various implementationen of a mock function', () => {
   mockedFunction = jest
     .fn()
     .mockImplementationOnce(x => x + ' eats ')
     .mockImplementationOnce(x => x + ' loves ')
     .mockImplementationOnce(x => x + '');
 
-  console.log('Das Ergebnis I: ', foodChain(['T-Rex', 'Triceratops', 'Trees'], mockedFunction));
+  console.log('The result I: ', foodChain(['T-Rex', 'Triceratops', 'Trees'], mockedFunction));
 
   expect(mockedFunction.mock.calls).toHaveLength(3);
 });
@@ -36,7 +36,7 @@ const mockedFunctionII = jest.fn(() => '');
 it('multiple calls hintereinander mocken', () => {
   mockedFunctionII.mockReturnValueOnce('Park I').mockReturnValueOnce('Park II').mockReturnValue('World');
 
-  /*** Wir rufen die Function nun 3x mit der gemockten Funktion auf. ***/
+  /*** We call the mock 3x with the mocked function. ***/
   console.log(movieList(mockedFunctionII));
   console.log(movieList(mockedFunctionII));
   console.log(movieList(mockedFunctionII));
@@ -45,10 +45,10 @@ it('multiple calls hintereinander mocken', () => {
 
 });
 
-/*** Den Mock benennen ***/
+/*** Name the mock ***/
 mockedFunctionII.mockName('getSuffix');
 
-it('dem mock einen leserlichen Namen geben', () => {
+it('giving the mock a readable name', () => {
   movieList(mockedFunctionII);
   expect(mockedFunctionII).not.toHaveBeenCalled();
 });

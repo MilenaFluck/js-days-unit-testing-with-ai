@@ -15,6 +15,6 @@ describe('emergencyAction', () => {
       .toStrictEqual({ evacuate: false, speciesEmergencyAction: SpeciesEmergencyAction.SEARCH});
   });
 
-  /*** Wie viele Testfälle fehlen hier noch? ***/
+  /*** How many test cases are we missing? ***/
 
 });

@@ -4,7 +4,7 @@ import { Park } from './model/park.model';
 
 describe('findAllParksInTheCountry', () => {
 
-  /*** Option 1: Stelle Testdaten selbst zusammen ***/
+  /*** Option 1: Create testdata from scratch and individually ***/
   it('should return all parks located in Germany I', () => {
 
     const allParks: Park[] = [
@@ -31,7 +31,7 @@ describe('findAllParksInTheCountry', () => {
     expect(findAllParksInTheCountry(germany, allParks)).toStrictEqual([allParks[0], allParks[1]]);
   });
 
-  /*** Option 2: Erzeuge Objecte manuell und überschreibene notwendige Attribute ***/
+  /*** Option 2: Create one object manually and overwrite attributes according to use case ***/
   it('should return all parks located in Germany II', () => {
 
     const park1 = ParkTestdaten.create();
@@ -49,7 +49,7 @@ describe('findAllParksInTheCountry', () => {
     expect(findAllParksInTheCountry(germany, [park1, park2, park3])).toStrictEqual([park1, park2]);
   });
 
-  /*** Option 3: Erzeuge Objecte und überschreibene notwendige Attribute ***/
+  /*** Option 3: Create many object and overwrite according to use case ***/
   it('should return all parks located in Germany III', () => {
     const parks = ParkTestdaten.createMany(3);
     parks[0].country = germany;
@@ -58,7 +58,7 @@ describe('findAllParksInTheCountry', () => {
     expect(findAllParksInTheCountry(germany, parks)).toStrictEqual([parks[0], parks[1]]);
   });
 
-  /*** Option 4: Erzeuge Object mit Parametern ***/
+  /*** Option 4: Create each object bay passing parameters to a create-function ***/
   it('should return all parks located in Germany IV', () => {
     const parks = [
       ParkTestdaten.createTestdataWithParameters('1', germany),

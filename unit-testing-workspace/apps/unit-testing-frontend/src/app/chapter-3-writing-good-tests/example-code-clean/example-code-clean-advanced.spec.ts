@@ -14,7 +14,7 @@ describe('isSpeciesDangerous', () => {
   });
 });
 
-/*** Regel 3: Halte es so einfach wie möglich ***/
+/*** Rule 4: Keep it simple ***/
 describe('evacuateVisitors', () => {
   it.each([
     [false, false, false, false],

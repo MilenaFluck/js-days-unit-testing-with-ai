@@ -13,8 +13,8 @@ describe('isSpeciesDangerous', () => {
 });
 
 describe('isParkOpen', () => {
-  /*** sollten wir diesen Code wirklich Testen?
-   * Regel 1: Teste keinen Code, den du nicht ändern kannst.
+  /*** should we really test this code?
+   * Rule 3: Do not test code, you cannot change.
    ***/
 });
 
