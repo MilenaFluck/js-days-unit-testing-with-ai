@@ -1,8 +1,7 @@
 import { createComponentFactory, Spectator } from '@ngneat/spectator/jest';
 import { MocksAndSpiesComponent } from './mocks-and-spies.components';
 import { MocksAndSpiesHttpService } from './mocks-and-spies-http.service';
-import { of, throwError } from 'rxjs';
-import { error } from '@angular/compiler-cli/src/transformers/util';
+import { of } from 'rxjs';
 
 describe('MocksAndSpiesComponent', () => {
 
@@ -31,11 +30,11 @@ describe('MocksAndSpiesComponent', () => {
     expect(spectator.component.choosePark.emit).toHaveBeenCalled();
   });
 
-  /*** Beispiel 2: Mock service and deliver realistic Return-Value ***/
+  /*** Example 2: Mock service and deliver realistic Return-Value ***/
   /*** We need a Return-Value to test further functionality! ***/
   it('should return observable of parks', (done) => {
 
-    /*** hier wird der Service gemockt ***/
+    /*** here the service is mocked ***/
     spectator.inject(MocksAndSpiesHttpService).get
       .mockReturnValue(of(['Phantasialand', 'Jurassic Park']));
 
