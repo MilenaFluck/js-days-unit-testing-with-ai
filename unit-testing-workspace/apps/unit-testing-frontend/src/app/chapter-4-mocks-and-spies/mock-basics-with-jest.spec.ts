@@ -8,7 +8,7 @@ let mockedFunction = jest.fn(x => x + ' eats ');
 it('closer look at the mock property', () => {
   console.log('The result: ', foodChain(['T-Rex', 'Triceratops', 'Trees'], mockedFunction));
 
-  // Infos über die gemockte Funktion: chainUpMock
+  /*** Infos about the mocked function: chainUpMock ***/
   console.log('The .mock-Property: ', mockedFunction.mock);
 
   expect(mockedFunction.mock.calls).toHaveLength(3);

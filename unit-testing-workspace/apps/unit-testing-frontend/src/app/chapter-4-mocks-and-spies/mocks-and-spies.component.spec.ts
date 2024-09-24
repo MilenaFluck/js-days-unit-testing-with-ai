@@ -23,7 +23,7 @@ describe('MocksAndSpiesComponent', () => {
     // jest.clearAllMocks();
   });
 
-  /*** Example 1: Simply Spy ***/
+  /*** Example 1: Simple Spy ***/
   it('should emit on chose', () => {
     spyOn(spectator.component.choosePark, 'emit');
 
