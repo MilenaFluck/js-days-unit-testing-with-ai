@@ -27,7 +27,8 @@
       "executor": "@nx/js:node",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "unit-testing-backend:build"
+        "buildTarget": "unit-testing-backend:build",
+        "port": 4300
       },
       "configurations": {
         "development": {
