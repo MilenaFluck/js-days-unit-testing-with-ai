@@ -30,7 +30,7 @@ Gib mir eine vollständige Testsuite, die mindestens die folgenden Szenarien abd
 -	Umgang mit ungültigen Eingaben (z. B. Strings, undefined)
 
 ## ## Format ## ##
-Präsentiere die Testfälle in Form von beschreibenden Testbeschreibungen (describe und test Blöcken), die gut lesbar und gut strukturiert sind.
+Präsentiere die Testfälle in Form von beschreibenden Testbeschreibungen (describe und it Blöcken), die gut lesbar und gut strukturiert sind.
 
 ## ## Einschränkungen ## ##
 Halte den Testcode einfach und übersichtlich. Verwende nur native Jest-Methoden ohne externe Bibliotheken.
