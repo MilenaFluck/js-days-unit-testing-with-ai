@@ -1,3 +1,5 @@
+# Beispiel-Prompt
+
 ## ## Anweisung ## ##
 Erstelle einen Unit Test mit Jest für die Funktion add(a, b), die die Summe von a und b zurückgibt.
 
@@ -38,3 +40,23 @@ Halte den Testcode einfach und übersichtlich. Verwende nur native Jest-Methoden
 ## ## Zielgruppe ## ##
 Die Antwort richtet sich an Reviewer, die die Qualität und Vollständigkeit der Tests bewerten werden. Stelle sicher, dass der Code klar kommentiert ist und die Absicht hinter jedem Testfall deutlich wird.
 
+
+_______________________________
+
+# Beispiel TDD-Test-Cases für Copilot Chat
+
+### Link zu Copilot Chat:
+https://copilot-chat.com/
+
+````
+input: "T-REX" expectedOutput: false
+input: "STEGOSAURUS" expectedOutput: true
+input: "TRICERATOPS" expectedOutput: true
+input: "null" expectedOutput: false
+input: "undefined" expectedOutput: false
+````
+### Requirements Description:
+Check whether a dinosaur is herbivore.
+
+### Hinweis:
+Der Typ des Input und expectedOutput muss immer derselbe sein (String, Boolean etc.). Daher werden null und undefined hier als Strings übergeben.
