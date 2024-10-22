@@ -4,14 +4,15 @@
 https://copilot-chat.com/
 
 ````
-input: "T-REX" expectedOutput: false
-input: "STEGOSAURUS" expectedOutput: true
-input: "TRICERATOPS" expectedOutput: true
+input: "BERT" expectedOutput: false
+input: "GPT" expectedOutput: true
+input: "BLOOM" expectedOutput: true
 input: "null" expectedOutput: false
 input: "undefined" expectedOutput: false
 ````
 ### Requirements Description:
-Check whether a dinosaur is herbivore.
+Check whether a model uses a decoder-only architecture.
 
 ### Hinweis:
-Der Typ des Input und expectedOutput muss immer derselbe sein (String, Boolean etc.). Daher werden null und undefined hier als Strings übergeben.
+Der Typ des Input und expectedOutput muss immer derselbe sein (String, Boolean etc.). 
+Daher werden null und undefined hier als Strings übergeben (gilt nur in der Copilot Chat Prompt-UI).
