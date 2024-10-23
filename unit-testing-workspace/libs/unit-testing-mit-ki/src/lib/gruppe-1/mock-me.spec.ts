@@ -11,7 +11,7 @@ import writeModelData from './mock-me';
 //___________________________________________________________________________________________________
 /*** Schlechtes Beispiel: dieses Beispiel zeigt was passieren kann, wenn wir nicht ordentlich mocken
       - lass den Test laufen
-      - überprüfe den assets folder in dieser lib
+      - überprüfe den assets folder in dieser lib => es wurde unerwünscht eine Datei erstellt, da nicht ausreichend gemockt
  ***/
 it('should execute writeModelData method', () => {
   const data = 'GPT-4';

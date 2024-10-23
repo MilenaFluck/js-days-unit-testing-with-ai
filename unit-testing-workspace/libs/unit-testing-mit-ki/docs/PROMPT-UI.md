@@ -11,7 +11,7 @@ https://codepal.ai/unit-tests-writer
 https://gemini.google.com/app
 
 ## Microsoft Copilot (basiert auf GPT-4)
-https://m365.cloud.microsoft/chat?fromcode=cmc&redirectid=FB3BB62F1EFA48DD9B334628F1026B13&auth=2
+https://m365.cloud.microsoft/chat
 
 ## HuggingChat (u.a. LLaMA, OPT etc.)
 
