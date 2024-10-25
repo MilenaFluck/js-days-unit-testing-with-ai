@@ -1,0 +1,40 @@
+<mat-card class="outburst-card">
+  <mat-card-header>
+    <button mat-raised-button (click)="outburst()">Report outbreak</button>
+    <button mat-raised-button (click)="solve()">Situation resolved</button>
+  </mat-card-header>
+  <mat-card-content>
+    <div id="outburst"></div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card class="table-card">
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Nr.</th>
+      <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef>Name</th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="species">
+      <th mat-header-cell *matHeaderCellDef>Species</th>
+      <td mat-cell *matCellDef="let element"> {{ getSpecies(element.id).join(', ')}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="open">
+      <th mat-header-cell *matHeaderCellDef>Public Entrance</th>
+      <td mat-cell *matCellDef="let element">
+        <p *ngIf="element.isOpen">Open</p>
+        <p *ngIf="!element.isOpen">Closed</p>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</mat-card>

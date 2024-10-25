@@ -1,0 +1,11 @@
+<mat-card class="dashboard-card">
+  <mat-card-header class="dashboard-card__header">
+    <mat-card-title>
+      <h3 class="kpi-title">{{ title | uppercase }}</h3>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content class="dashboard-card-content kpi-result">
+    <span>{{ value }}</span>
+    <p *ngIf="difference">{{ difference }}</p>
+  </mat-card-content>
+</mat-card>

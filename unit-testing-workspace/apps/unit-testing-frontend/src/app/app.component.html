@@ -1,0 +1,24 @@
+<div class="root">
+  <div class="divider">
+    <div class="wrap">
+      <div class="img-wrap">
+        <img width="100" height="100" src="../../assets/jurassic-world.png" alt="jurassic-logo">
+      </div>
+      <h3 class="name">Jurassic World Inc.</h3>
+    </div>
+    <mat-list>
+      <a class="nav-link"
+         routerLinkActive="active-link"
+         *ngFor="let link of links" [routerLink]="[link.href]"
+      >
+        <mat-list-item>
+          <mat-icon matListItemIcon>{{link.icon}}</mat-icon>
+          <div matListItemLine>{{link.name}}</div>
+        </mat-list-item>
+      </a>
+    </mat-list>
+  </div>
+  <div class="component">
+    <router-outlet class="content"></router-outlet>
+  </div>
+</div>

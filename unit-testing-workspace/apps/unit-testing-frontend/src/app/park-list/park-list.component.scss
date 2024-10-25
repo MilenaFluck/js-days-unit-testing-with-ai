@@ -1,0 +1,49 @@
+@import "apps/unit-testing-frontend/src/assets/colors";
+
+.table-card {
+  background-color: #ffffff;
+  margin-left: 24px;
+}
+
+.dino-table {
+  width: 100%;
+}
+
+table {
+  th {
+    background: map-get($app-secondary-palette, 100);
+    color: map-get($app-primary-palette, 700);
+    font-weight: 500;
+    line-height: 1.5rem;
+    border-bottom: 1px solid map-get($app-secondary-palette, 200);
+  }
+
+  td {
+    color: map-get($app-primary-palette, 800);
+    border-bottom: 1px solid map-get($app-secondary-palette, 200);
+
+    mat-icon {
+      color: map-get($app-primary-palette, 700);
+    }
+  }
+}
+
+.mat-column-id {
+  width: 32px;
+  border-right: 1px solid currentColor;
+  padding-right: 24px;
+  text-align: center;
+
+}
+
+.outburst-card {
+  margin-left: 8px;
+
+  button {
+    background-color: map-get($app-primary-palette, 800);
+    color: #ffffff;
+    margin-right: 8px;
+    border-radius: 4px;
+  }
+}
+
